@@ -75,6 +75,7 @@ namespace JWTAuthentication.WebApi.Services
                 authenticationModel.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                 authenticationModel.Email = user.Email;
                 authenticationModel.UserName = user.UserName;
+                authenticationModel.Image=user.Image;
                 var rolesList = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
                 authenticationModel.Roles = rolesList.ToList();
 

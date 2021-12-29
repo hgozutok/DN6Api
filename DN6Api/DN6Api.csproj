@@ -9,15 +9,19 @@
   <ItemGroup>
     <Compile Remove="Context\**" />
     <Compile Remove="Helpers\**" />
+    <Compile Remove="SaleMan\Controllers\**" />
     <Compile Remove="Service\**" />
     <Content Remove="Context\**" />
     <Content Remove="Helpers\**" />
+    <Content Remove="SaleMan\Controllers\**" />
     <Content Remove="Service\**" />
     <EmbeddedResource Remove="Context\**" />
     <EmbeddedResource Remove="Helpers\**" />
+    <EmbeddedResource Remove="SaleMan\Controllers\**" />
     <EmbeddedResource Remove="Service\**" />
     <None Remove="Context\**" />
     <None Remove="Helpers\**" />
+    <None Remove="SaleMan\Controllers\**" />
     <None Remove="Service\**" />
   </ItemGroup>
 
@@ -32,6 +36,23 @@
 
   <ItemGroup>
     <None Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="SaleMan\Controllers\CategoriesController.cs" />
+    <Compile Include="SaleMan\Controllers\CompaniesController.cs" />
+    <Compile Include="SaleMan\Controllers\CompanyUsersController.cs" />
+    <Compile Include="SaleMan\Controllers\CustomersController.cs" />
+    <Compile Include="SaleMan\Controllers\EmployeesController.cs" />
+    <Compile Include="SaleMan\Controllers\OrderDetailsController.cs" />
+    <Compile Include="SaleMan\Controllers\OrdersController.cs" />
+    <Compile Include="SaleMan\Controllers\OrdersWithCustomers.cs" />
+    <Compile Include="SaleMan\Controllers\OrderWithCustomersController.cs" />
+    <Compile Include="SaleMan\Controllers\ProductPartsController.cs" />
+    <Compile Include="SaleMan\Controllers\ProductsController.cs" />
+    <Compile Include="SaleMan\Controllers\ShippersController.cs" />
+    <Compile Include="SaleMan\Controllers\SparePartsController.cs" />
+    <Compile Include="SaleMan\Controllers\SuppliersController.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +72,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaleMan.Core\SaleMan.Core.csproj" />
   </ItemGroup>
 
 </Project>

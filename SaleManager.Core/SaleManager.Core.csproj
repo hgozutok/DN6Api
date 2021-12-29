@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SaleManagerContext\**" />
+    <EmbeddedResource Remove="SaleManagerContext\**" />
+    <None Remove="SaleManagerContext\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DBContext\SaleManagerContext1.cs" />
+    <Compile Remove="Entities\CustomerCustomerDemo.cs" />
+    <Compile Remove="Entities\CustomerDemographics.cs" />
+    <Compile Remove="Entities\EmployeeTerritories.cs" />
+    <Compile Remove="Entities\OrdersWithCustomers.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DBContext\" />
+  </ItemGroup>
+
+</Project>

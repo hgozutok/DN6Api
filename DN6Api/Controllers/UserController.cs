@@ -31,6 +31,7 @@ namespace JWTAuthentication.WebApi.Controllers
         public async Task<IActionResult> GetTokenAsync(TokenRequestModel model)
         {
             var result = await _userService.GetTokenAsync(model);
+ 
             SetRefreshTokenInCookie(result.RefreshToken);
             return Ok(result);
         }

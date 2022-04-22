@@ -25,10 +25,8 @@ var builder = WebApplication.CreateBuilder(args);
     services.AddControllers();
 
     // configure strongly typed settings object
-    //services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-    // configure DI for application services
-    //services.AddScoped<IUserService, UserService>();
+
 
     services.Configure<JWT>(builder.Configuration.GetSection("JWT"));
 

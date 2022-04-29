@@ -17,7 +17,7 @@ namespace JWTAuthentication.WebApi.Constants
 
         public const string default_username = "user";
         public const string default_email = "user@secureapi.com";
-        public const string default_password = "Pa$$w0rd.";
+        public const string default_password = "Pa$$w0rdd.";
         public const Roles default_role = Roles.User;
     }
 }

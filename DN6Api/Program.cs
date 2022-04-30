@@ -60,7 +60,7 @@ var builder = WebApplication.CreateBuilder(args);
             o.RequireHttpsMetadata = false;
             o.SaveToken = false;
             o.TokenValidationParameters = new TokenValidationParameters
-            {
+            { 
                 ValidateIssuerSigningKey = true,
                 ValidateIssuer = true,
                 ValidateAudience = true,

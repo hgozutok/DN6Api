@@ -1,7 +1,7 @@
 namespace DN6Api
 {
     public class WeatherForecast
-    {
+    {//test case
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

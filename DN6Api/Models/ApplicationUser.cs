@@ -13,5 +13,6 @@ namespace JWTAuthentication.WebApi.Models
         public string LastName { get; set; }
         public string Image { get; set; }
         public List<RefreshToken> RefreshTokens { get; set; }
+        //
     }
 }
